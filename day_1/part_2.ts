@@ -8,7 +8,7 @@ import {processMassInput} from './processMassInput';
 // 100756
 // `;
 
-console.log('--- Day 1, part 1: The Tyranny of the Rocket Equation ---', input);
+console.log('--- Day 1, part 2: The Tyranny of the Rocket Equation ---', input);
 
 const output = processMassInput(input)
     .map(calculateFuel)
