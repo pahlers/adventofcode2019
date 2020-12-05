@@ -1,0 +1,23 @@
+{
+  "name": "adventofcode2019",
+  "version": "1.0.0",
+  "description": "https://adventofcode.com/2019",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-script"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pahlers/adventofcode2019.git"
+  },
+  "author": "Peter Ahlers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pahlers/adventofcode2019/issues"
+  },
+  "homepage": "https://github.com/pahlers/adventofcode2019#readme",
+  "dependencies": {
+    "ts-node": "^9.1.0",
+    "typescript": "^4.1.2"
+  }
+}
