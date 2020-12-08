@@ -35,7 +35,7 @@ const output = path0
         if (intersectionB) {
             const intersectionRelativeVector = v1.sub(intersectionB);
             const intersectionA = v1.add(intersectionRelativeVector);
-            intersectionA.setDistanceFromRoot(v1.distanceFromRoot + intersectionRelativeVector.distance());
+            intersectionA.setDistanceFromRoot(v1.distanceFromRoot + intersectionRelativeVector.rectilinearDistance());
 
             return [...acc, [intersectionA, intersectionB]];
         }

@@ -12,7 +12,7 @@ export class Vector {
         return `[${this.x},${this.y}]`;
     }
 
-    distance() {
+    rectilinearDistance() {
         return Math.abs(this.x) + Math.abs(this.y);
     }
 

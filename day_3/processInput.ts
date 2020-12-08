@@ -42,7 +42,7 @@ function toAbsolutePosition(acc, vector: Vector, index): Vector[] {
     const last: Vector = acc[acc.length - 1];
     const recalulatedVector: Vector = last.add(vector);
 
-    recalulatedVector.setDistanceFromRoot(last.distanceFromRoot + vector.distance());
+    recalulatedVector.setDistanceFromRoot(last.distanceFromRoot + vector.rectilinearDistance());
 
     return [...acc, recalulatedVector];
 }

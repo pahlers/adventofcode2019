@@ -34,7 +34,7 @@ const output = path0
 
         return intersection ? [...acc, intersection] : acc;
     }, [])
-    .map(vector => vector.distance())
+    .map(vector => vector.rectilinearDistance())
     .filter(distance => distance > 0)
     .sort((a, b) => a - b);
 

@@ -14,7 +14,7 @@ export function getIntersectionFactory(v1: Vector, v2: Vector) {
         if (intersection.type === 'intersecting') {
             const intersectionRelativeVector = v3.sub(new Vector(intersection.point.x, intersection.point.y));
             const intersectionVector = v3.add(intersectionRelativeVector);
-            intersectionVector.setDistanceFromRoot(v3.distanceFromRoot + intersectionRelativeVector.distance());
+            intersectionVector.setDistanceFromRoot(v3.distanceFromRoot + intersectionRelativeVector.rectilinearDistance());
 
             return intersectionVector;
         }
