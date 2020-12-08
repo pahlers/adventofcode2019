@@ -21,7 +21,7 @@ console.log('--- Day 3, part 1: Crossed Wires ---', input);
 
 const [path0, path1] = processInput(input);
 
-const output = path0
+const [output] = path0
     .reduce(getIntersections(path1), [])
     .map(([vector]) => vector.rectilinearDistance())
     .filter(distance => distance > 0)

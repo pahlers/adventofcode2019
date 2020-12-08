@@ -21,7 +21,7 @@ console.log('--- Day 3, part 2: Crossed Wires ---', input);
 
 const [path0, path1] = processInput(input);
 
-const output = path0
+const [output] = path0
     .reduce(getIntersections(path1), [])
     .map(([v1, v2]) => v1.distanceFromRoot + v2.distanceFromRoot)
     .filter(distance => distance > 0)
