@@ -1,7 +1,6 @@
 import {processInput} from './processInput';
 import {input} from './input';
-import {Vector} from './Vector';
-import {getIntersectionFactory} from './getIntersectionFactory';
+import {getIntersections} from './getIntersections';
 
 // const input = `
 // R8,U5,L5,D3
@@ -23,18 +22,8 @@ console.log('--- Day 3, part 1: Crossed Wires ---', input);
 const [path0, path1] = processInput(input);
 
 const output = path0
-    .reduce((acc: Vector[], v1: Vector, indexA: number, selfA: Vector[]) => {
-        const v2 = selfA[indexA + 1];
-
-        if (v2 === undefined) {
-            return acc;
-        }
-
-        const intersection = path1.reduce(getIntersectionFactory(v1, v2), undefined);
-
-        return intersection ? [...acc, intersection] : acc;
-    }, [])
-    .map(vector => vector.rectilinearDistance())
+    .reduce(getIntersections(path1), [])
+    .map(([vector]) => vector.rectilinearDistance())
     .filter(distance => distance > 0)
     .sort((a, b) => a - b);
 
